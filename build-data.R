@@ -58,7 +58,8 @@ colnames(rel_browser) = c(":START_ID(Person)", "income",":END_ID(Employment)")
 write.table(rel_browser, file="data/rel_browser.csv", sep=",", row.names=F, na="", col.names = TRUE)
 
 ## ^^ in the import.sh file, the relationships parameter gets applied to all records
-## 
+## database defined with the into parameter must not exist
+system("bash import.sh")
 
 
 
